@@ -1,0 +1,6 @@
+# Set to anything other than 'no' to allow hotkey interactive startup...
+PROMPT=<%= scope.function_bool2yesno([@prompt]) %>
+# Set to 'yes' to allow probing for devices with swap signatures
+AUTOSWAP=<%= scope.function_bool2yesno([@autoswap]) %>
+# What ttys should gettys be started on?
+ACTIVE_CONSOLES=<%= @active_consoles %>

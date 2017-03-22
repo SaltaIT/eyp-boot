@@ -1,7 +1,6 @@
 class boot::params {
 
-  $package_name='boot'
-  $service_name='boot'
+  $package_name='initscripts'
 
   case $::osfamily
   {
@@ -9,7 +8,7 @@ class boot::params {
     {
       case $::operatingsystemrelease
       {
-        /^[5-7].*$/:
+        /^[6-7].*$/:
         {
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
@@ -21,6 +20,7 @@ class boot::params {
       {
         'Ubuntu':
         {
+          fail('Unsupported')
           case $::operatingsystemrelease
           {
             /^14.*$/:

@@ -1,17 +1,15 @@
 class boot(
-                            $manage_package        = true,
-                            $package_ensure        = 'installed',
-                            $manage_service        = true,
-                            $manage_docker_service = true,
-                            $service_ensure        = 'running',
-                            $service_enable        = true,
-                          ) inherits boot::params{
-
-  validate_re($package_ensure, [ '^present$', '^installed$', '^absent$', '^purged$', '^held$', '^latest$' ], 'Not a supported package_ensure: present/absent/purged/held/latest')
+            $manage_package  = true,
+            $bootup          = 'color',
+            $rescol          = '60',
+            $prompt          = true,
+            $autoswap        = false,
+            $active_consoles = '/dev/tty[1-6]',
+            $single          = '/sbin/sulogin',
+          ) inherits boot::params{
 
   class { '::boot::install': } ->
-  class { '::boot::config': } ~>
-  class { '::boot::service': } ->
+  class { '::boot::config': } ->
   Class['::boot']
 
 }
