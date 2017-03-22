@@ -2,9 +2,9 @@ class boot::config inherits boot {
 
   concat { '/etc/sysconfig/init':
     ensure => 'present',
-    owner => 'root',
-    group => 'root',
-    mode => '0644',
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644',
   }
 
   concat::fragment{ 'sysconfg/init base':
