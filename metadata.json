@@ -2,10 +2,10 @@
   "name": "eyp-boot",
   "version": "0.1.0",
   "author": "eyp",
-  "summary": null,
+  "summary": "/etc/sysconfig/init management",
   "license": "Apache-2.0",
   "source": "https://github.com/NTTCom-MS/eyp-boot",
-  "project_page": null,
+  "project_page": "https://github.com/NTTCom-MS/eyp-boot",
   "issues_url": "https://github.com/NTTCom-MS/eyp-boot/issues",
   "dependencies": [
     {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0"},
