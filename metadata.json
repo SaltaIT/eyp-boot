@@ -1,6 +1,6 @@
 {
   "name": "eyp-boot",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Jordi Prats",
   "summary": "/etc/sysconfig/init management",
   "license": "Apache-2.0",
